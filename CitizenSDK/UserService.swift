@@ -7,14 +7,14 @@ public struct UserService
     
     public init() { }
 
-    public func createUser(username: String,
+    public func createUser(primaryEmail: String,
                            password: String,
                            passPhrase: String,
                            authPublicKey: String?,
                            completionHandler: @escaping (User?, Error?) -> Void)
     {
         var user: User = User()
-        user.username = username
+        user.primaryEmail = primaryEmail
         user.password = password
         user.passPhrase = passPhrase
         
@@ -33,12 +33,12 @@ public struct UserService
     }
     
     
-    public func loginUserPass(username: String,
+    public func loginUserPass(email: String,
                               password: String,
                               completionHandler: @escaping (User?, Error?) -> Void)
     {
         var user: User = User()
-        user.username = username
+        user.primaryEmail = email
         user.password = password
         
         guard let userJson: String = user.toJson() else {

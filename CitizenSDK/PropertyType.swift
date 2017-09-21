@@ -35,7 +35,7 @@ public enum PropertyType : Int
     case POB                                     = 13
     case NATIONALITY                             = 14
     case PROFILEPIC                              = 15
-    case NAMESPACE                               = 16
+    case USERNAME                               = 16
     case REQUESTER_LAT                           = 17
     case REQUESTER_LNG                           = 18
     case RESPONDER_LAT                           = 19
@@ -72,7 +72,7 @@ public enum PropertyType : Int
             case .POB:                                     return "POB"
             case .NATIONALITY:                             return "NATIONALITY"
             case .PROFILEPIC:                              return "PROFILEPIC"
-            case .NAMESPACE:                               return "NAMESPACE"
+            case .USERNAME:                                return "USERNAME"
             case .REQUESTER_LAT:                           return "REQUESTER_LAT"
             case .REQUESTER_LNG:                           return "REQUESTER_LNG"
             case .RESPONDER_LAT:                           return "RESPONDER_LAT"
