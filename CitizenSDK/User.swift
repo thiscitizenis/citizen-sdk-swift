@@ -8,7 +8,7 @@ public struct User : JsonObject
     
     public var personId: String?
     
-    public var username: String?
+    public var primaryEmail: String?
     
     public var namespace: String?
     
@@ -41,7 +41,7 @@ public struct User : JsonObject
         guard let id = jsonDictionary["id"] as? String,
               let personId = jsonDictionary["personId"] as? String,
               let namespace = jsonDictionary["namespace"] as? String,
-              let username = jsonDictionary["username"] as? String
+              let primaryEmail = jsonDictionary["primaryEmail"] as? String
             else {
                 NSLog(TAG + ResourceError.jsonMissingRequiredFields.localizedDescription)
                 return nil;
@@ -50,7 +50,7 @@ public struct User : JsonObject
         self.id = id
         self.personId = personId
         self.namespace = namespace
-        self.username = username
+        self.primaryEmail = primaryEmail
         
         self.password = jsonDictionary["password"] as? String
         self.apiKey = jsonDictionary["apiKey"] as? String
@@ -87,7 +87,7 @@ public struct User : JsonObject
         
         if self.id != nil { dict["id"] = self.id! }
         if self.personId != nil { dict["personId"] = self.personId! }
-        if self.username != nil { dict["username"] = self.username! }
+        if self.primaryEmail != nil { dict["primaryEmail"] = self.primaryEmail! }
         if self.password != nil { dict["password"] = self.password! }
         if self.passPhrase != nil { dict["passPhrase"] = self.passPhrase! }
         if self.passwordTemporary != nil { dict["passwordTemporary"] = self.passwordTemporary! }

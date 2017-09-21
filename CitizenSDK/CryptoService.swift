@@ -220,10 +220,10 @@ public class CryptoService: NSObject
     }
     
     
-    public func signLoginTransaction(username: String, token: String) -> String? {
+    public func signLoginTransaction(email: String, token: String) -> String? {
         
         var loginTransaction: LoginTransaction = LoginTransaction()
-        loginTransaction.username = username
+        loginTransaction.username = email
         loginTransaction.token = token
         
         let stringToSign: String? = loginTransaction.toString()

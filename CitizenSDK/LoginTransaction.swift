@@ -17,7 +17,7 @@ public struct LoginTransaction : JsonObject
     public init?(jsonDictionary: [String: Any]) {
         guard let id = jsonDictionary["id"] as? String,
               let username = jsonDictionary["username"] as? String,
-              let token = jsonDictionary["username"] as? String
+              let token = jsonDictionary["token"] as? String
             else {
                 NSLog(TAG + ResourceError.jsonMissingRequiredFields.localizedDescription)
                 return nil
